@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>О разработчике</title>
+        <style>
+            * { margin: 0; padding: 0; box-sizing: border-box; }
+            header h1 {
+                background-color: #222;      /* цвет прямоугольника */
+                color: #ffcc00;                 /* цвет текста внутри */
+                padding: 10px 20px;          /* внутренние отступы — задают высоту */
+                width: 100%;
+                display: flex;
+                justify-content: center; 
+                
+            }
+            nav {
+                background-color: #484848;
+                width: 100%;
+                display: flex;
+                position: sticky;
+                top: 0;
+                z-index: 1000;
+                width: 100%;
+                justify-content: center; 
+            }
+            a {
+                color:#ffcc00;
+                padding: 10px 20px;  
+                width: 100%;
+                display: flex;
+                justify-content: center; 
+                text-decoration: none;
+            }
+            .card_img img {
+                background:#b1a175;
+                border-radius: 12px;
+                width: 200px;
+                padding: 8px;
+                border-radius: 12px;
+            }
+            #about{
+                display: flex;
+                gap: 20px; 
+            }
+            body {
+            font-family: 'Arial', 'Helvetica', sans-serif;
+            font-size: 16px;        /* базовый размер */
+            font-weight: 400;       /* жирность: 400 = normal, 700 = bold */
+            font-style: normal;     /* normal | italic */
+            line-height: 1.6;       /* межстрочный интервал (без единиц — множитель) */
+            }
+            .skills {
+                max-width: 700px;
+                margin: 0 auto;
+                padding: 40px;
+            }
+
+            .skills h2 {
+                text-align: center;
+                margin-bottom: 30px;
+                color: #222;
+            }
+
+            .skill {
+                margin-bottom: 20px;
+            }
+
+            /* Название и процент */
+            .skill__head {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 6px;
+                font-size: 0.95rem;
+                color: #333;
+                font-weight: 600;
+            }
+
+            .skill__percent {
+                color: #0066cc;
+            }
+
+            /* Серая полоса */
+            .skill__bar {
+                height: 12px;
+                background: #e5e7eb;
+                border-radius: 6px;
+                overflow: hidden;
+            }
+
+            /* Заполненная часть */
+            .skill__fill {
+                height: 100%;
+                background: linear-gradient(90deg, #0066cc, #4f9dff);
+                border-radius: 6px;
+                transition: width 1.2s ease;
+            }
+        </style>
+
+    </head>
+    <body>
+        <header>
+            <h1>О разработчике</h1>
+        </header>
+        <nav>
+            <a href="main.html">Вернуться на главную</a>
+        </nav>
+        <div class="card_img">
+            <section id="about">
+                <img src="photo_2026-09-14_15-33-11.jpg">
+                <div class="card_body">
+                    <h3>
+                        Посторонко Владислав Андреевич
+                    </h3>
+                    <p>
+                        Cтудент 3 курса физико-технического факультета Донецкого 
+                        государственного университета (ДонГУ). Обучается по направлению 
+                        «Информатика и вычислительная техника» (ИВТ), группа 2, по 
+                        специальности «Программист».
+                    </p>
+                    <p>
+                        С детства увлекается музыкой — играет на гитаре. Музыка помогает 
+                        ему находить вдохновение и развивает чувство ритма, которое, как 
+                        ни странно, пригодилось и в программировании: код, как и музыка, 
+                        требует точности и структуры.
+                    </p>
+                    <p>
+                        Основная сфера интересов — программирование. Осваивает языки и 
+                        технологии, связанные с разработкой, много времени уделяет 
+                        практике и учебным проектам. Считает, что программирование — 
+                        это не просто ремесло, а способ создавать что-то полезное 
+                        и понятное людям.
+                    </p>
+                    <p>
+                        Сочетает учёбу, музыку и саморазвитие в IT. В планах — 
+                        углубить знания в разработке, набраться опыта и стать 
+                        востребованным специалистом.
+                    </p>
+                </div>
+            </section>
+            <section class="skills">
+                <h2>Уровень владения навыками</h2>
+
+                <div class="skill">
+                    <div class="skill__head">
+                        <span class="skill__name">HTML</span>
+                        <span class="skill__percent">50%</span>
+                    </div>
+                    <div class="skill__bar">
+                        <div class="skill__fill" style="width: 50%"></div>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <div class="skill__head">
+                        <span class="skill__name">CSS</span>
+                        <span class="skill__percent">50%</span>
+                    </div>
+                    <div class="skill__bar">
+                        <div class="skill__fill" style="width: 50%"></div>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <div class="skill__head">
+                        <span class="skill__name">JavaScript</span>
+                        <span class="skill__percent">60%</span>
+                    </div>
+                    <div class="skill__bar">
+                        <div class="skill__fill" style="width: 60%"></div>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <div class="skill__head">
+                        <span class="skill__name">Python</span>
+                        <span class="skill__percent">75%</span>
+                    </div>
+                    <div class="skill__bar">
+                        <div class="skill__fill" style="width: 75%"></div>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <div class="skill__head">
+                        <span class="skill__name">Git</span>
+                        <span class="skill__percent">60%</span>
+                    </div>
+                    <div class="skill__bar">
+                        <div class="skill__fill" style="width: 60%"></div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </body>
