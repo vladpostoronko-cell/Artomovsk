@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Артёмовск — Главная страница</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        header h1 {
+            background-color: #222;      /* цвет прямоугольника */
+            color: #ffcc00;                 /* цвет текста внутри */
+            padding: 10px 20px;          /* внутренние отступы — задают высоту */
+            width: 100%;
+            display: flex;
+            justify-content: center; 
+            
+        }
+        footer p {
+            display: flex;
+            justify-content: center;
+        }
+        header p {
+            background-color: #222;      /* цвет прямоугольника */
+            color: #ffcc00;                 /* цвет текста внутри */
+            padding: 10px 20px;          /* внутренние отступы — задают высоту */
+            width: 100%;
+            display: flex;
+            justify-content: center; 
+            
+        }
+        nav {
+            background-color: #484848;
+            width: 100%;
+            display: flex;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            width: 100%;
+            justify-content: center; 
+        }
+        a {
+            color:#ffcc00;
+            padding: 10px 20px;  
+            width: 100%;
+            display: flex;
+            justify-content: center; 
+            text-decoration: none;
+            
+        }
+        body {
+            font-family: 'Arial', 'Helvetica', sans-serif;
+            font-size: 16px;        /* базовый размер */
+            font-weight: 400;       /* жирность: 400 = normal, 700 = bold */
+            font-style: normal;     /* normal | italic */
+            line-height: 1.6;       /* межстрочный интервал (без единиц — множитель) */
+        }
+        #gallery {
+            padding: 0 10px;
+        }
+        #gallery img {
+            width: 280px;        /* ширина */
+            height: 200px;       /* высота */
+            object-fit: cover;   /* кадрирует без искажений */
+        }
+        #about {
+            padding: 0 10px;
+        }
+        #events {
+            padding: 60px 10px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        #events h2 {
+            font-size: 2rem;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        .events {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+        .event-card {
+            background:#484848;
+            color: #ffd965;
+            padding: 10px;
+            border-radius: 12px;
+            overflow: hidden;  
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .event-date {
+            background: #ffcc00;
+            padding: 5px;
+            border-radius: 5px;
+            overflow: hidden;  
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .event-card span {
+            color: #000000;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Шапка -->
+    <header>
+        <h1>Артёмовск</h1>
+        <p>Город с богатой историей и культурным наследием</p>
+    </header>
+
+    <!-- Навигация -->
+    <nav>
+        <a href="#about">О городе</a>
+        <a href="#gallery">Фотогалерея</a>
+        <a href="#events">Новости</a>
+        <a href="about.html">О разработчике</a>
+    </nav>
+
+    <div class="container">
+
+        <!-- Общее описание города -->
+        <section id="about" class="description">
+            <h2>Общее описание</h2>
+            <p>
+                Артёмовск — город, расположенный в живописном регионе, известный своей
+                богатой историей, культурными традициями и гостеприимными жителями.
+                Город был основан в XVIII веке и с тех пор прошёл путь от небольшого
+                поселения до современного промышленного и культурного центра.
+            </p>
+            <p>
+                Сегодня Артёмовск — это уютный город с развитой инфраструктурой,
+                парками, музеями и памятниками архитектуры. Здесь гармонично сочетаются
+                историческое наследие и современные достижения. Город привлекает
+                туристов своими достопримечательностями, а местные жители гордятся
+                своей малой родиной.
+            </p>
+            <p>
+                Основные отрасли экономики — промышленность, торговля и туризм.
+                В городе работают школы, больницы, библиотеки, театры и спортивные
+                комплексы, создавая комфортные условия для жизни и развития.
+            </p>
+        </section>
+
+        <!-- Фотогалерея -->
+        <section id="gallery">
+            <h2>Фотогалерея</h2>
+            <div class="gallery">
+                <img src="1630689.jpg" alt="Панорама города Артёмовск">
+                <img src="878218.jpg" alt="Центральная площадь">
+                <img src="35995912.jpg" alt="Городской парк">
+                <img src="47095804.jpg" alt="Набережная реки">
+                <img src="105472319.jpg" alt="Историческое здание">
+                <img src="1623082348_435998_49.jpg" alt="Улицы города">
+                <img src="d43546ea28b54705881f439059dd8c0c-219803456.jpg" alt="Вид на город с высоты">
+                <img src="medium-274815-2857966415.jpg" alt="Природа вокруг города">
+            </div>
+        </section>
+
+        <!-- События -->
+        <section id="events">
+            <h2>Новости города</h2>
+            <div class="events">
+
+                <article class="event-card">
+                    <span class="event-date">12 сентября 2026</span>
+                    <h3>Владимир Корнилов: Сегодня - 455-летие героического Артемовска! Конечно, дата символическая</h3>
+                    <p>Сегодня - 455-летие героического Артемовска! Конечно, дата символическая. Но так уж заведено, 
+                        что отмечали ее в Бахмуте именно во вторую субботу сентября.</p>
+                </article>
+
+                <article class="event-card">
+                    <span class="event-date">11 сентября 2026</span>
+                    <h3>76 лет назад в Артемовске началось строительство завода шампанских вин</h3>
+                    <p>11 августа 1950 года в гипсовых штольнях Артемовска начали строительство завода 
+                        шампанских вин, который вскоре стал крупнейшим в Восточной Европе по выпуску 
+                        игристого напитка. Первую продукцию новый завод выдал спустя всего 4 года - в 1954 году.</p>
+                </article>
+
+                <article class="event-card">
+                    <span class="event-date">21 мая 2026</span>
+                    <h3>Артемовск: 3 года со дня освобождения</h3>
+                    <p>20 мая 2023 года штурмовые отряды ЧВК «Вагнер» 
+                        полностью освободили город после долгих и тяжелейших боев. 
+                        Бахмут снова стал Артемовском - третий раз в своей истории.</p>
+                </article>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Подвал -->
+    <footer>
+        <p>&copy; 2026 Город Артёмовск. Все права защищены.</p>
+    </footer>
+
+</body>
+</html>
